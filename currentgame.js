@@ -68,7 +68,7 @@ const listaEsportes = [
     "bocha",
     "ciclismo",
     "corrida",
-    "halterofilismo"
+    "golfe"
 ]
 
 const listaPaises = [
@@ -140,11 +140,13 @@ const listColors = [
 
 const listSports = [
     "football",
-    "soccer",
-    "volleyball",
+    "fencing",
     "basketball",
-    "golf",
-    "curling"
+    "boxing",
+    "bocce",
+    "cycling",
+    "race",
+    "golf"
 ]
 
 const listCountries = [
