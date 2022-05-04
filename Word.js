@@ -1,5 +1,17 @@
 import {gameAlert} from "./currentgame.js";
 
+// EVENTO DE INTERCEPTAÇÃO DE ERRO EM JAVASCRIPT
+
+window.onerror = function (errorMsg, url, lineNumber, column, errorObj) {
+
+    alert(`Error: ${errorMsg} \n
+    Script: ${url} \n
+    On Line: ${lineNumber} \n
+    On Column: ${column} \n
+    StackTrace: ${errorObj}`)
+
+}
+
 export class Word {
 
     constructor(word) {

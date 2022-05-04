@@ -6,6 +6,18 @@ const themeSelector = document.querySelector("#theme-selector");
 
 newGameButton.addEventListener("click", () => {themeSelector.classList.toggle("visible")})
 
+// EVENTO DE INTERCEPTAÇÃO DE ERRO EM JAVASCRIPT
+
+window.onerror = function (errorMsg, url, lineNumber, column, errorObj) {
+
+    alert(`Error: ${errorMsg} \n
+    Script: ${url} \n
+    On Line: ${lineNumber} \n
+    On Column: ${column} \n
+    StackTrace: ${errorObj}`)
+
+}
+
 const listaFrutas = [
     "abacaxi",
     "laranja",
