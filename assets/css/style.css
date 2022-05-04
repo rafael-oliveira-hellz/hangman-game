@@ -1,0 +1,337 @@
+:root {
+    --clickable: #117CE8;
+    --secondary-bg: #FFFDDF;
+}
+
+* {
+    font-family: 'Comic Neue', cursive;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    background-image: url(/assets/images/bg-line.png);
+}
+
+a {
+    color: var(--clickable);
+    text-decoration: none;
+}
+
+#app {
+    margin: 0px auto;
+    padding: 15px;
+    max-width: 720px;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+/** HEADER **/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#title {
+    font-size: 36px;
+    margin: 0;
+}
+
+#new-game {
+    font-size: 21px;
+    border: 2px solid var(--clickable);
+    border-radius: 60px;
+    padding: 5px 20px;
+}
+
+/** ALERTS **/
+.alert {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary-bg);
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    padding: 40px 20px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, .3);
+    z-index: 1;
+}
+
+.alert.visible {
+    display: block;
+}
+
+#alert-box {
+    font-size: 26px;
+    bottom: 60px;
+}
+
+/** THEME SELECTOR **/
+#theme-selector {
+    top: calc(80px);
+    z-index: 2;
+}
+
+#theme-selector h2 {
+    margin: 0 0 40px;
+    font-size: 26px;
+}
+
+#theme-lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#theme-selector h3 {
+    margin: 0 0 40px;
+    font-size: 21px;
+}
+
+.theme-list {
+    display: flex;
+    flex-direction: column;
+    font-size: 21px;
+}
+
+.theme-list .theme {
+    padding: 10px 0px;
+    margin-bottom: 10px;
+}
+
+/** GAME **/
+#game {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#current-game {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#current-theme-and-word-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 700px) and (orientation: landscape) {
+    #current-game {
+        flex-direction: row;
+    }
+
+    #hangman-image {
+        width: 50%;
+    }
+}
+
+
+
+#hangman-image img {
+    max-width: 600px;
+    width: 100%;
+    max-height: 100%;
+    height: 50vh;
+    object-fit: contain;
+}
+
+#current-word {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.letter {
+    display: inline-block;
+    font-size: 42px;
+    line-height: 42px;
+    height: 42px;
+    color: var(--clickable);
+    width: 36px;
+    margin: 0px 2px;
+    text-align: center;
+    position: relative;
+}
+
+.letter::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    background-color: black;
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+}
+
+/** KEYBOARD **/
+
+#keyboard-container {
+    display: none
+}
+
+#keyboard-container.visible {
+    display: block;
+}
+
+#keyboard-switch {
+    margin-bottom: 5px;
+}
+
+#keyboard-switch a {
+    padding: 2px 20px;
+    border: 2px solid var(--clickable);
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#keyboard-switch .active {
+    display: none;
+}
+
+#keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.key {
+    width: 10%;
+    text-align: center;
+    font-size: 36px;
+    padding: 5px 5px;
+    cursor: pointer;
+}
+
+.key.pressed {
+    opacity: 0.25;
+    cursor: not-allowed;
+}
+
+.qwerty #q {
+	order: 1;
+}
+
+.qwerty #w {
+	order: 2;
+}
+
+.qwerty #e {
+	order: 3;
+}
+
+.qwerty #r {
+	order: 4;
+}
+
+.qwerty #t {
+	order: 5;
+}
+
+.qwerty #y {
+	order: 6;
+}
+
+.qwerty #u {
+	order: 7;
+}
+
+.qwerty #i {
+	order: 8;
+}
+
+.qwerty #o {
+	order: 9;
+}
+
+.qwerty #p {
+	order: 10;
+}
+
+.qwerty span:nth-child(11) {
+	order: 11;
+}
+
+.qwerty #a {
+	order: 12;
+}
+
+.qwerty #s {
+	order: 13;
+}
+
+.qwerty #d {
+	order: 14;
+}
+
+.qwerty #f {
+	order: 15;
+}
+
+.qwerty #g {
+	order: 16;
+}
+
+.qwerty #h {
+	order: 17;
+}
+
+.qwerty #j {
+	order: 18;
+}
+
+.qwerty #k {
+	order: 19;
+}
+
+.qwerty #l {
+	order: 20;
+}
+
+.qwerty span:nth-child(21) {
+	order: 21;
+}
+
+.qwerty #z {
+	order: 22;
+}
+
+.qwerty #x {
+	order: 23;
+}
+
+.qwerty #c {
+	order: 24;
+}
+
+.qwerty #v {
+	order: 25;
+}
+
+.qwerty #b {
+	order: 26;
+}
+.qwerty #n {
+	order: 27;
+}
+.qwerty #m {
+	order: 28;
+}
+
+.key-break {
+	width: 100%;
+}
+
+/** FOOTER **/
+footer {
+    text-align: center;
+}

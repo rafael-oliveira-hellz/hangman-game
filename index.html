@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca || Hangman Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1 id="title">Jogo de Forca do Enzo</h1>
+            <a href="#" id="new-game">Novo Jogo</a>
+
+            <section id="theme-selector" class="alert">
+                <h2>Selecione um Tema:</h2>
+                <div id="theme-lists">
+                    <div class="theme-column">
+                        <h3>Português</h3>
+                        <div class="theme-list">
+                            <a href="#" class="theme" data-theme="listaFrutas">Frutas</a>
+                            <a href="#" class="theme" data-theme="listaAnimais">Animais</a>
+                            <a href="#" class="theme" data-theme="listaCores">Cores</a>
+                            <a href="#" class="theme" data-theme="listaEsportes">Esportes</a>
+                            <a href="#" class="theme" data-theme="listaPaises">Países</a>
+                        </div>
+                    </div>
+
+                    <div class="theme-column">
+                        <h3>English</h3>
+                        <div class="theme-list">
+                            <a href="#" class="theme" data-theme="listFruits">Fruits</a>
+                            <a href="#" class="theme" data-theme="listAnimals">Animals</a>
+                            <a href="#" class="theme" data-theme="listColors">Colors</a>
+                            <a href="#" class="theme" data-theme="listSports">Sports</a>
+                            <a href="#" class="theme" data-theme="listCountries">Countries</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </header>
+
+        <section id="game">
+
+        <span>Jogo criado para eu jogar com meu filho, Enzo. 8-) <br/>
+            Sintam-se à vontade para jogarem e se divertirem também. ;-)</span>
+            
+            <div id="current-game">
+                <div id="hangman-image">
+                    <img src="./assets/images/forca-0.png">
+                </div>
+    
+                <div id="current-theme-and-word-container">
+                    <div id="current-theme"></div>
+    
+                    <div id="current-word">
+                </div>
+                
+                    
+                </div>
+            </div>
+        
+            <div id="keyboard-container">
+                <div id="keyboard-switch">
+                    <a>QWERTY</a>
+                    <a class="active">ABC</a>
+                </div>
+                <div id="keyboard">
+                    <a id="a" class="key">A</a>
+                    <a id="b" class="key">B</a>
+                    <a id="c" class="key">C</a>
+                    <a id="d" class="key">D</a>
+                    <a id="e" class="key">E</a>
+                    <a id="f" class="key">F</a>
+                    <a id="g" class="key">G</a>
+                    <a id="h" class="key">H</a>
+                    <a id="i" class="key">I</a>
+                    <a id="j" class="key">J</a>
+                    <span class="key-break"></span>
+                    <a id="k" class="key">K</a>
+                    <a id="l" class="key">L</a>
+                    <a id="m" class="key">M</a>
+                    <a id="n" class="key">N</a>
+                    <a id="o" class="key">O</a>
+                    <a id="p" class="key">P</a>
+                    <a id="q" class="key">Q</a>
+                    <a id="r" class="key">R</a>
+                    <a id="s" class="key">S</a>
+                    <span class="key-break"></span>
+                    <a id="t" class="key">T</a>
+                    <a id="u" class="key">U</a>
+                    <a id="v" class="key">V</a>
+                    <a id="w" class="key">W</a>
+                    <a id="x" class="key">X</a>
+                    <a id="y" class="key">Y</a>
+                    <a id="z" class="key">Z</a>
+                </div>
+            </div>
+
+            <div id="alert-box" class="alert visible">Clique em "Novo Jogo" para Começar</div>
+
+        </section>
+        
+        <footer>
+            Criado por <a href="https://www.linkedin.com/in/rafael-de-oliveira-56253615b/" target="_blank">Rafael de Oliveira (Hellz)</a>.
+        </footer>
+
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>
