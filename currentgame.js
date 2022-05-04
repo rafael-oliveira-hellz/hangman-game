@@ -139,7 +139,7 @@ const listColors = [
 ]
 
 const listSports = [
-    "football",
+    "soccer",
     "fencing",
     "basketball",
     "boxing",
