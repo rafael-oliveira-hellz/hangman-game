@@ -28,7 +28,8 @@ const listaFrutas = [
     "abacate",
     "cacau",
     "caqui",
-    "carambola"
+    "carambola",
+    "limão"
 ];
 
 const listaAnimais = [
@@ -42,7 +43,8 @@ const listaAnimais = [
     "camundongo",
     "tartaruga",
     "golfinho",
-    "rinoceronte"
+    "rinoceronte",
+    "hipopótamo"
 ];
 
 const listaCores = [
@@ -74,28 +76,28 @@ const listaEsportes = [
 const listaPaises = [
     "alemanha",
     "argentina",
-    // "austrália",
+    "austrália",
     "brasil",
-    // "bolívia",
+    "bolívia",
     "chile",
-    // "canadá",
+    "canadá",
     "china",
-    // "colômbia",
+    "colômbia",
     "egito",
     "equador",
     "espanha",
     "estados unidos",
     "frança",
-    // "grécia",
+    "grécia",
     "holanda",
-    // "índia",
+    "índia",
     "inglaterra",
-    // "itália",
-    // "japão",
-    // "méxico",
+    "itália",
+    "japão",
+    "méxico",
     "peru",
     "portugal",
-    // "rússia",
+    "rússia",
     "uruguai",
     "venezuela"
 ]

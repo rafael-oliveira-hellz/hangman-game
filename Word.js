@@ -1,4 +1,4 @@
-import {gameAlert} from "./currentgame.js";
+import { gameAlert } from "./currentgame.js";
 
 // EVENTO DE INTERCEPTAÇÃO DE ERRO EM JAVASCRIPT
 
@@ -32,10 +32,20 @@ export class Word {
         this.hangmanImg.src = `./assets/images/forca-${this.mistakes}.png`;
     }
 
+    removeSpecials(texto) {
+        text = texto.replace(/[ÀÁÂÃÄÅ]/,"A");
+        texto = texto.replace(/[àáâãäå]/,"a");
+        texto = texto.replace(/[ÈÉÊË]/,"E");
+        texto = texto.replace(/[èéêë]/,"e");
+
+        return texto.replace(/[^a-z0-9]/gi,''); 
+    }
+
     checkCharacter(char, keyButton){
         let gotRight = false;
         for(let i = 0; i < this.boxes.length; i++) {
-            if (char == this.characters[i]) {
+
+            if (char == this.removeSpecials(this.characters[i])) {
                 if (char !== this.boxes[i]) {
                     this.corrects++
                 }

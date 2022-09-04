@@ -102,6 +102,11 @@ header {
     margin-bottom: 10px;
 }
 
+#current-theme {
+    font-size: 21px;
+    margin-bottom: 40px;
+}
+
 /** GAME **/
 #game {
     display: flex;
@@ -131,6 +136,10 @@ header {
     #hangman-image {
         width: 50%;
     }
+
+    #current-word {
+        flex-wrap: wrap;
+    }
 }
 
 
@@ -146,7 +155,7 @@ header {
 #current-word {
     display: flex;
     align-items: flex-end;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .letter {
