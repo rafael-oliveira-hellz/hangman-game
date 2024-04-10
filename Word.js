@@ -33,7 +33,7 @@ export class Word {
     }
 
     removeSpecials(texto) {
-        text = texto.replace(/[ÀÁÂÃÄÅ]/,"A");
+        texto = texto.replace(/[ÀÁÂÃÄÅ]/,"A");
         texto = texto.replace(/[àáâãäå]/,"a");
         texto = texto.replace(/[ÈÉÊË]/,"E");
         texto = texto.replace(/[èéêë]/,"e");
